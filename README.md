@@ -17,7 +17,7 @@ Analyzed 3 months of Google Analytics 4 (GA4) data for the Google Merchandise St
 ---
 
 ## The Visualization: Finding the Bottleneck
-![Power BI Funnel Chart](assets/power_bi_funnel_screenshot.png)
+![Power BI Funnel Chart](assets/power_bi_funnel.png)
 
 ### Key Insights from the Data:
 1. **Healthy Top-of-Funnel:** The transition from *View Item* to *Add to Cart* is relatively stable across all devices.
@@ -34,7 +34,7 @@ Real-world GA4 data is heavily nested and prone to duplicate tracking. To ensure
 * **Session Scoping (Unnesting):** GA4 does not natively expose Session IDs. I used `UNNEST(event_params)` to extract the `ga_session_id` and concatenated it with the `user_pseudo_id` to create a globally unique session identifier. This prevents cross-session actions from artificially inflating funnel conversion rates.
 * **Chronological Sequencing:** Deployed a `CASE` statement to assign integer values to funnel steps, followed by a `LAG()` window function partitioned by `device_category` to dynamically calculate the stage-to-stage drop-off percentage.
 
-*(View the full SQL scripts in the [sql_queries/](sql_queries/) folder).*
+*(View the full SQL scripts in the [sql_pipeline/](sql_pipeline/) folder).*
 
 ---
 
