@@ -52,4 +52,4 @@ To quantify the problem, I ran a secondary query isolating successful `purchase`
 * **Calculated AOV:** $81.35
 * **Abandoned Sessions at Payment Stage:** ~4,200
 * **Conservative Recovery Goal:** 5% UI improvement (210 recovered sessions)
-* **Financial Impact:** 210 recovered orders * $81.35 = $17,083 per quarter ➔ **~$68,334 Annualized**.
+* **Financial Impact:** 210 recovered orders $81.35 = $17,083 per quarter ➔ **~$68,334 Annualized**.
